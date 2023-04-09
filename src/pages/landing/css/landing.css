@@ -1,0 +1,19 @@
+.landing-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  flex-direction: column;
+  margin-top: 50px;
+}
+.landing-item {
+  display: flex;
+  flex-direction: column;
+}
+.button-style {
+  font-size: 15px;
+  padding: 5px;
+  cursor: pointer;
+  padding-right: 10px;
+  padding-left: 10px;
+}
