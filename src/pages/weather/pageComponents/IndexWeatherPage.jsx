@@ -67,7 +67,7 @@ const IndexWeatherPage = () => {
   const convertCelciusTotFahrenheit = (celcius) => {
     // FORMULA FOR CONVERTING CELCIUS TO FAHRENHEIT
     const ans = (celcius * 9) / 5 + 32;
-    return ans;
+    return parseFloat(ans).toFixed(2);
   };
   return (
     // * WEATHER CONTAINER START *
