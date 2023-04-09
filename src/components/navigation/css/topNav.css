@@ -6,6 +6,7 @@
   font-weight: bold;
   flex-direction: row;
   align-items: center;
+  justify-content: space-between;
 }
 .top-icon {
   font-size: 30px;
@@ -13,4 +14,24 @@
 }
 .container {
   padding: 20px;
+}
+.top-nav-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.button-logout {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: none;
+  font-size: 25px;
+  /* padding: 5px; */
+  border-radius: 20px;
+  height: 40px;
+  width: 40px;
+  cursor: pointer;
+}
+.button-logout:hover {
+  background-color: #19689d;
 }
