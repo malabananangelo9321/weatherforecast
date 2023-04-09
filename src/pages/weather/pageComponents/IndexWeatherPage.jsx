@@ -5,7 +5,7 @@ import {
   apiKeyOpenWeatherMap,
   apiOpenWeatherMap,
 } from "../../../utils/ApiUtils";
-import "./css/weather.css";
+import "../css/weather.css";
 import axios from "axios";
 import moment from "moment";
 const width = window.innerWidth;
