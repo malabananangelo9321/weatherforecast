@@ -6,7 +6,7 @@ const renderEqualProps = (prevProps, nextProps) => {
   return JSON.stringify(prevProps) === JSON.stringify(nextProps);
 };
 const Search = (props) => {
-  const { value, onChangeText, name } = props;
+  const { value, onChangeText, name, ...param } = props;
   return (
     <div className="search-container">
       <FontAwesomeIcon icon={faSearch} className="input-icon-search" />
@@ -15,6 +15,7 @@ const Search = (props) => {
         value={value}
         onChange={onChangeText}
         name={name}
+        required={param.required}
       />
     </div>
   );
