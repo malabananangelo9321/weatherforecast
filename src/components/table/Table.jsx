@@ -1,33 +1,35 @@
 import React from "react";
 import "./css/table.css";
-const Table = () => {
+const renderEqualProps = (prevProps, nextProps) => {
+  return JSON.stringify(prevProps) === JSON.stringify(nextProps);
+};
+const Table = (props) => {
+  const { header, dataList } = props;
   return (
     <div>
       <table>
         <thead>
           <tr>
-            <th>{`Date (mm/dd/yyyy)`}</th>
-
-            <th>{`Temp(F)`}</th>
-
-            <th>{`Description`}</th>
-
-            <th>{`Main`}</th>
-
-            <th>{`Pressure`}</th>
-
-            <th>{`Humidity`}</th>
+            {header.map((val, index) => {
+              return <th key={index}>{val.name}</th>;
+            })}
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <td></td>
-            <td></td> <td></td> <td></td> <td></td> <td></td>
-          </tr>
+          {dataList.map((val, index) => {
+            return (
+              <tr key={index}>
+                {header.map((valHeader, indexHead) => {
+                  const value = val[valHeader.header];
+                  return <td key={indexHead}>{value}</td>;
+                })}
+              </tr>
+            );
+          })}
         </tbody>
       </table>
     </div>
   );
 };
 
-export default Table;
+export default React.memo(Table, renderEqualProps);
