@@ -22,26 +22,31 @@ const IndexHomePage = () => {
   };
   return (
     // * HOME CONTAINER START *
-    <div className="landing-container">
-      <p>{user.name}</p>
-      <p>{`https://github.com/${user.nickname}`}</p>
-      {/* SEARCH SECTION START */}
-      <div className="search-section">
-        <Search
-          value={state.search}
-          onChangeText={onChangeText}
-          name="search"
-        />
+    <form onSubmit={onClickSearch}>
+      <div className="landing-container">
+        <p>{user.name}</p>
+        <p>{`https://github.com/${user.nickname}`}</p>
+        {/* SEARCH SECTION START */}
+
+        <div className="search-section">
+          <Search
+            value={state.search}
+            onChangeText={onChangeText}
+            name="search"
+            required={true}
+          />
+        </div>
+        {/* SEARCH SECTION START */}
+        {/* SEARCH BUTTON SECTION START */}
+        <div className="search-button-section ">
+          <button className="button-style" type="submit">
+            Display Weather
+          </button>
+        </div>
+
+        {/* SEARCH BUTTON SECTION START */}
       </div>
-      {/* SEARCH SECTION START */}
-      {/* SEARCH BUTTON SECTION START */}
-      <div className="search-button-section ">
-        <button className="button-style" onClick={onClickSearch}>
-          Display Weather
-        </button>
-      </div>
-      {/* SEARCH BUTTON SECTION START */}
-    </div>
+    </form>
     // * HOME CONTAINER END *
   );
 };
