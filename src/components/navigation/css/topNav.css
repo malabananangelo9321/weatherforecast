@@ -31,7 +31,24 @@
   height: 40px;
   width: 40px;
   cursor: pointer;
+  margin-left: 20px;
 }
 .button-logout:hover {
   background-color: #19689d;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 10px;
+}
+.nav-color {
+  color: #fff;
+  cursor: pointer;
+}
+@media only screen and (max-width: 600px) {
+  ul {
+    display: none;
+  }
 }
